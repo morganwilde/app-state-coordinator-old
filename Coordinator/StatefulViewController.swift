@@ -13,7 +13,7 @@ class StatefulViewController: UIViewController {
   var appState: AppState?
   
   override func viewDidAppear(animated: Bool) {
-    appState?.step()
+    appState?.step("View did appear.")
     super.viewDidAppear(animated)
   }
 }

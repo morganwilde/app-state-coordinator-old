@@ -29,6 +29,7 @@ class AppStateCoordinator: NSObject {
     navigationController?.delegate = self
   }
   
+  
   func go() {
     currentStateIndex += 1
     if states.count > 0 && currentStateIndex >= 0 && currentStateIndex < states.count {

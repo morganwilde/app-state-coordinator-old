@@ -10,8 +10,11 @@ import UIKit
 
 class SecondAppState: AppState {
   init() {
-    super.init(finalStep: 2)
+    super.init(finalStep: "Slept for 2 seconds.")
     let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
     viewController = mainStoryboard.instantiateViewControllerWithIdentifier("SecondViewController") as? SecondViewController
+  }
+  override func didStep(stepName: String?) {
+    print(stepName)
   }
 }

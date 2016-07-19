@@ -13,9 +13,11 @@ class SecondViewController: StatefulViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    self.appState?.step()
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
       sleep(2)
-      self.appState?.step()
+      self.appState?.step("Slept for 2 seconds.")
     }
   }
   @IBAction func onThird(sender: UIBarButtonItem) {

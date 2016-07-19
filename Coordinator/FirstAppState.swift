@@ -10,7 +10,7 @@ import Foundation
 
 class FirstAppState: AppState {
   init() {
-    super.init(finalStep: 1)
+    super.init(finalStepNumber: 1)
     viewController = AppStateCoordinator.navigationViewController?.viewControllers.first as? FirstViewController
     viewController?.appState = self
   }
