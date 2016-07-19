@@ -36,11 +36,13 @@ class SecondAppState: AppState {
 The `finalStep` is by default set to `1`, which is set during `viewDidAppear(_:)`. Initialize `finalStep` to a specific step within the view controllers lifecycle. And then after each step, like fetching api data, increment the step number by calling `appState?.step()`.
 
 ```Swift
-override func viewDidLoad() {
-	super.viewDidLoad()
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-		sleep(2)
-		self.appState?.step()
+class SecondViewController: StatefulViewController {
+	override func viewDidLoad() {
+		super.viewDidLoad()
+	    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+			sleep(2)
+			self.appState?.step()
+		}
 	}
 }
 ```
