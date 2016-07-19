@@ -12,11 +12,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-  var appStateCoordinator = AppStateCoordinator.shared
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
-    appStateCoordinator.states = [
+    AppStateCoordinator.shared.states = [
       FirstAppState(),
       SecondAppState(),
       ThirdAppState(),
